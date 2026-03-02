@@ -163,7 +163,7 @@
                             success: function() {
                                 Swal.fire('Berhasil!', 'Data berhasil dihapus.',
                                         'success')
-                                    .then(() => location.reload());
+                                    .then(() => table.draw());
                             },
                             error: function() {
                                 Swal.fire('Error!', 'Gagal menghapus data.', 'error');
