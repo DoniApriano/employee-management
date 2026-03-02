@@ -30,7 +30,7 @@ class EmployeeService
             });
         }
 
-        return $data->get();
+        return $data->orderBy('created_at', 'desc')->get();
     }
 
     public function create($data)

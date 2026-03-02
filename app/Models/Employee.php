@@ -21,7 +21,7 @@ class Employee extends Model
     {
         return $this->photo ?
             (Storage::disk('public')->exists($this->photo) ?
-                Storage::url($this->photo) :
+                url(Storage::url($this->photo)) :
                 asset('assets/dummy/dummy-avatar.jpeg')) :
             asset('assets/dummy/dummy-avatar.jpeg');
     }
