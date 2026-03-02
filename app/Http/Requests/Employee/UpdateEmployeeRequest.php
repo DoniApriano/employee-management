@@ -21,7 +21,6 @@ class UpdateEmployeeRequest extends FormRequest
      */
     public function rules(): array
     {
-        info($this->all());
         return [
             'name'          => ['required', 'string', 'max:255'],
             'email'         => ['required', 'string', 'email', 'max:255', 'unique:employees,email,' . $this->route('employee')->id],
